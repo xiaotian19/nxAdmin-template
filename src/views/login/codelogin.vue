@@ -9,7 +9,7 @@
       <el-input size="small" @keyup.enter.native="handleLogin" v-model="loginForm.code" auto-complete="off" placeholder="请输入验证码">
         <i slot="prefix" class="icon-yanzhengma yanzhengma" style=""></i>
         <template slot="append">
-          <span @click="handleSend" class="msg-text" :class="[{display:msgKey}]">{{msgText}}</span>
+          <span @click="handleSend" class="msg-text" :class="[{ display: msgKey }]">{{ msgText }}</span>
         </template>
       </el-input>
     </el-form-item>
@@ -58,13 +58,13 @@ export default {
   },
   created() {},
   mounted() {},
-  computed: {
-  },
+  computed: {},
   props: [],
   methods: {
     handleSend() {
       if (this.msgKey) return
       this.msgText = MSGSCUCCESS.replace('${time}', this.msgTime)
+
       this.msgKey = true
       const time = setInterval(() => {
         this.msgTime--
@@ -91,8 +91,8 @@ export default {
 </script>
 
 <style>
-.yanzhengma{
-  display:block;
+.yanzhengma {
+  display: block;
   margin-top: 8px;
 }
 .msg-text {

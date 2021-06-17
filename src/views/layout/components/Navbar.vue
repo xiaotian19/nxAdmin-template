@@ -5,34 +5,20 @@
     <nx-breadcrumb class="breadcrumb-container"></nx-breadcrumb>
 
     <div class="right-menu">
-
-      <nx-github style="margin-top:2px" class="nx-help right-menu-item"></nx-github>
-      <!-- <error-log class="errLog-container right-menu-item"></error-log> -->
-      <nx-help class="nx-help right-menu-item" />
-      
-     
-
       <!-- <lang-select class="international right-menu-item"></lang-select> -->
       <nx-lang-select class="international right-menu-item"></nx-lang-select>
 
-      
-
       <el-dropdown class="avatar-container right-menu-item" trigger="click">
         <div class="avatar-wrapper">
-        <img class="user-avatar" src="https://mgbq.github.io/nx-admin-site/home.png">
+          <img class="user-avatar" src="https://mgbq.github.io/nx-admin-site/home.png" />
           <i class="el-icon-caret-bottom"></i>
         </div>
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
             <el-dropdown-item>
-              home
+              首页
             </el-dropdown-item>
           </router-link>
-          <a target='_blank' href="https://github.com/mgbq/nxAdmin-template/">
-            <el-dropdown-item>
-              github地址
-            </el-dropdown-item>
-          </a>
           <el-dropdown-item divided>
             <span @click="logout" style="display:block;">退出</span>
           </el-dropdown-item>
@@ -45,21 +31,17 @@
 <script>
 import { mapGetters } from 'vuex'
 
-import nxBreadcrumb from '@/components/nx-breadcrumb'
-import nxHamburger from '@/components/nx-hamburger'
-import nxHelp from '@/components/nx-help/index'
+import nxBreadcrumb from '../components/nx-breadcrumb'
+import nxHamburger from '../components/nx-hamburger'
 
-import nxLangSelect from '@/components/nx-lang-select/index'
+import nxLangSelect from '../components/nx-lang-select/index'
 
-import nxGithub from '@/components/nx-github/index'
 export default {
   name: 'navBar',
   components: {
     nxBreadcrumb,
     nxHamburger,
-    nxHelp,
-    nxLangSelect,
-    nxGithub
+    nxLangSelect
   },
   computed: {
     ...mapGetters(['sidebar', 'name', 'avatar'])
@@ -82,6 +64,9 @@ export default {
   height: 50px;
   line-height: 50px;
   border-radius: 0px !important;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
   .hamburger-container {
     line-height: 58px;
     height: 50px;

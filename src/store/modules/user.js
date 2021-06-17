@@ -6,8 +6,8 @@ const user = {
     token: getToken(),
     name: '',
     avatar: '',
-    roles: []
-
+    roles: [],
+    browserHeaderTitle: '后台管理系统'
   },
 
   mutations: {

@@ -14,6 +14,11 @@ import './mock' // simulation data
 // font-awesome
 import '@/assets/library/font-awesome-4.7.0/css/font-awesome.min.css'
 
+import {
+  iconfontUrl,
+  iconfontVersion
+} from '@/config/env'
+
 import App from './App'
 
 import router from './router'
@@ -26,10 +31,6 @@ import i18n from './lang'
 import {
   loadStyle
 } from './utils/util'
-import {
-  iconfontUrl,
-  iconfontVersion
-} from '@/config/env'
 
 import '@/icons' // icon
 
@@ -57,7 +58,5 @@ new Vue({
   router,
   store,
   i18n,
-  // template: '<App/>',
-  // components: { App }
   render: h => h(App)
 })

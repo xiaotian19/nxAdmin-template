@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
-   <nx-github-corner></nx-github-corner>
-     <!-- <a target="_blank" href="https://github.com/mgbq/vue-permission"><img
+    <nx-github-corner></nx-github-corner>
+    <!-- <a target="_blank" href="https://github.com/mgbq/vue-permission"><img
         style="position: absolute; top: 48px; right: 0; border: 0;"
         src="../../../static/img/report/forkme.png"
         alt="Fork me on GitHub"></a> -->
@@ -29,7 +29,6 @@
 </template>
 
 <script>
-
 import nxDataDisplay from '@/components/nx-data-display/nx-data-display'
 import nxDataCard from '@/components/nx-data-card/nx-data-card'
 import nxDataTabs from '@/components/nx-data-tabs/nx-data-tabs'
@@ -43,7 +42,6 @@ export default {
     nxDataTabs,
     nxDataIcons,
     nxGithubCorner
-
   },
   data() {
     return {
@@ -219,9 +217,9 @@ export default {
   margin-bottom: 16px;
 }
 </style>
-<style lang ="scss">
-    @import '../../styles/data-card.scss';
-    @import '../../styles/data-display.scss';
-    @import '../../styles/data-icons.scss';
-    @import '../../styles/data-tabs.scss';
+<style lang="scss">
+@import '../../styles/data-card.scss';
+@import '../../styles/data-display.scss';
+@import '../../styles/data-icons.scss';
+@import '../../styles/data-tabs.scss';
 </style>
